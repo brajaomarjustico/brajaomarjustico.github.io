@@ -1,0 +1,619 @@
+//import
+  @import "../2-basics/_typography.scss";
+  @import "../1-tools/_fonts.scss";
+
+//Reset
+     * {
+          padding: 0px;
+          margin:  0px;
+          box-sizing: border-box;
+     }
+
+//Setup
+  section {
+      padding: 50px 25px;
+      font-family: montserrat;
+      position: relative;
+
+      //untuk section kontak--------
+      &:last-child {
+        padding: 0px 25px;
+        margin-top: 100px;
+      }
+  }
+
+//kolom
+     .col-1 {
+          padding: 200px 0px;
+          margin: 0px 10px;
+     }
+
+     .col-50 {
+          width: 100%;
+          position: relative;
+     }
+
+
+//FLEX
+     .flex {
+          display: flex;
+          flex-direction: row;
+     }
+     .align--center {
+          align-items: center;
+     }
+     .flex--center {
+          justify-content: center;
+     }
+
+     .flex--spacearound {
+          justify-content: space-around;
+     }
+
+     .flex--spacebeetwen {
+          justify-content: space-between;
+     }
+
+     .order-first {
+               order: 1;
+     }
+
+//Mulai dari sini
+     header {
+          padding: 20px 20px;
+          background-color: gray;
+          font-family: montserrat;
+
+               .opt {
+                    height: 50px;
+                    position: relative;
+
+                    .menu {
+                         width: 40px;
+                         height: 40px;
+                         cursor: pointer;
+                         position: relative;
+
+                         svg {
+                              height: 40px;
+                              width: 40px;
+                         }
+
+                         &:hover svg line.theLine2,
+                         &:hover svg line.theLine3 {
+                              transform: translateX(7px);
+                         }
+
+                         svg {
+                               transform-origin: top center;
+                              -webkit-transition: transform 400ms ease-in-out 1200ms;
+                            	-moz-transition: transform 400ms ease-in-out 1200ms;
+                            	transition: transform 400ms ease-in-out 1200ms;
+
+                             line.theLine2,
+                             line.theLine3 {
+                               -webkit-transition: transform 500ms ease-in-out;
+                               -moz-transition: transform 500ms ease-in-out;
+                               transition: transform 500ms ease-in-out;
+                               }
+                          }
+
+                    }
+
+                    .logo {
+                         cursor: pointer;
+                    }
+               }
+
+     }
+
+//side nav
+     .side-nav {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      transition: all 550ms ease-in-out;
+      z-index: 6;
+      pointer-events: none;
+
+        &::before {
+               content: '';
+               width: 100%;
+               height: 100%;
+               position: absolute;
+               background-color: rgba(0, 0, 0, 0.3);
+               top: 0px;
+               right: 0px;
+               bottom: 0px;
+               left: 0px;
+               opacity: 0;
+               transition: all 300ms ease-in-out;
+        }
+
+      .side-nav__container {
+            width: 90%;
+            max-width: 400px;
+            height: 100%;
+            position: absolute;
+            background-color: rgba(0, 0, 10, 0.7) ;
+            box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.3);
+            top: 0px;
+            left: 0px;
+            transform: translateX(-102%);
+            transition: all 500ms ease-in-out;
+
+          @media (max-width: 640px) {
+               max-width: 80%;
+          }
+
+          .btn-close {
+            width: 60px;
+            height: 60px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+
+                 svg {
+                     width: 60px;
+                     height: 60px;
+                 }
+
+              &:hover svg .fill {
+               stroke: red;
+              }
+
+              .fill {
+               -webkit-transition: stroke 150ms ease-in-out;
+               -moz-transition: stroke 150ms ease-in-out;
+               transition: stroke 150ms ease-in-out;
+              }
+          }
+     }
+    
+     ul {
+       width: 100%;
+       height: 90%;
+       position: relative;
+       margin-top: 50%;
+
+        li {
+             width: 100%;
+             margin: 0;
+             padding: 0;
+             display: flex;
+             flex: 1;
+             justify-content: center;
+             align-items: center;
+             position: relative;
+             text-align: center;
+
+                a {
+                  width: 100%;
+                  line-height: 2;
+                  font-family: 'Roboto';
+                  font-size: 42px;
+                  font-weight: bold;
+                  text-align: center;
+                  color: papayawhip;
+                  text-decoration: none;
+                  cursor: pointer;
+
+                  &:hover {
+                    background-color: rgba(0, 0, 0, 0.10);
+                    color: lighten(blue, 10%);
+                  }
+
+                 }
+              }
+     }
+          
+                }
+
+     .side-nav--visible {
+          pointer-events: auto;
+     }
+
+     .side-nav--visible.side-nav {
+          &::before{
+           opacity: 1;
+          }
+
+          .side-nav__container {
+             transform: none;
+          }
+     }
+
+//section
+     section.koding {
+          overflow: hidden;
+
+               .flex {
+                    @media (max-width: 768px) {
+                         flex-direction: column-reverse;
+                    }
+
+                    .col-50 {
+
+                    }
+               }
+
+          img {
+               @media (max-width: 640px) {
+                    width: 100%;
+                    height: 100%;
+                    margin-bottom: 20px;
+               }
+          }
+
+          .kod {
+               animation: Ani1 1600ms forwards ease-in-out;
+
+               @media (max-width: 640px)  {
+                    animation: none;
+               }
+          }
+
+          .ani {
+               transform: translateX(700px);
+
+               @media (max-width: 640px) {
+                    transform: none;
+               }
+
+          }
+     }
+
+     section.desain {
+          padding: 75px 25px;
+          background-image: url('../../img/bg design-01.jpg');
+          background-blend-mode: multiply;
+          background-color: rgba(15, 17, 243, 0.5);
+          background-size: cover;
+          text-align: center;
+          align-items: center;
+
+          @media (max-width: 768px) {
+               display: block;
+          }
+
+          .col-50{
+               padding: 0px;
+
+               .grid {
+
+                     @media (max-width: 640px) {
+                          margin-bottom: 30px;
+                     }
+
+                     /* fluid 5 columns */
+                    .grid__sizer,
+                    .grid__item {
+                          width: 20%;
+
+                               @media (max-width: 768px) {
+                                   width: 47.50%;
+                               }
+                    }
+
+                    /* 2 columns wide */
+                    .grid__item--width2 {
+                         //  width: 40%;
+                    }
+
+                    .grid__item {
+                         background-color: #ccc;
+                         // width: 100px;
+                         border-radius: 5px;
+                         margin-bottom: 10px;
+                         display: inline-block;
+                         cursor: pointer;
+                         opacity: 0;
+                         transition: box-shadow 300ms ease-in-out;
+
+                         @media (max-width: 640px) {
+                              opacity: 1;
+                         }
+
+                         &:hover {
+                              box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+                         }
+
+                         &:nth-child(1) {
+                              background-color: white;
+                              background-image: url('../../img/design/Logo_A_team.png');
+                              background-position: center;
+                              background-size: cover;
+                         }
+
+                         &:nth-child(2) {
+                              background-image: url('../../img/design/Infinty-artr.jpg');
+                              background-position: center;
+                              background-size: cover;
+                         }
+
+                         &:nth-child(3) {
+                              background-color: white;
+                              background-image: url('../../img/design/Logo-MM1.jpg');
+                              background-position: center;
+                              background-size: cover;
+                         }
+
+                         &:nth-child(4) {
+                              background-color: white;
+                              background-image: url('../../img/design/KN (Belakang).jpg');
+                              background-size: cover;
+                         }
+
+                         &:nth-child(5) {
+                              background-color: white;
+                              background-image: url('../../img/design/KN (DEPAN).jpg');
+                              background-position: center;
+                              background-size: cover;
+                         }
+
+                         &:nth-child(6) {
+                              background-color: white;
+                              background-image: url('../../img/design/Goresan-tangan.jpg');
+                              background-position: center;
+                              background-size: cover;
+                         }
+
+                         &:nth-child(7) {
+                              background-color: white;
+                              background-image: url('../../img/design/Gundala j.jpg');
+                              background-position: center;
+                              background-size: cover;
+                         }
+
+                         //set ukuran
+                         &:nth-child(2),
+                         &:nth-child(10){
+                              height: 125px;
+                         }
+
+                         &:nth-child(4),
+                         &:nth-child(6){
+                              height: 185px;
+                         }
+
+                         &:nth-child(3),
+                         &:nth-child(8) {
+                              height: 200px;
+                         }
+
+                         &:nth-child(1),
+                         &:nth-child(9) {
+                              height: 215px;
+                         }
+
+                         &:nth-child(7),
+                         &:nth-child(5) {
+                              height: 275px;
+                         }
+                    }
+
+                    .is-visible {
+                         animation: yot 300ms forwards ease-in-out;
+
+                         @media (max-width: 640px) {
+                              animation: none;
+                         }
+                    }
+               }
+          }
+
+          .des {
+               p{
+                    color: #fff;
+               }
+
+               a {
+                    color: #222222;
+                    padding:  10px 25px;
+                    background: #fff;
+                    transition: all 300ms ease-in-out;
+
+                    &:hover {
+                         padding: 13px 28px;
+                         color: #fff;
+                         background: none;
+                         border: 2px solid #fff;
+                    }
+               }
+          }
+     }
+
+     section.blog {
+
+          @media (max-width: 640px) {
+               display: block;
+          }
+
+          .artic {
+            width: 100%;
+            height: auto;
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+              
+              .tikel {
+               width: 370px;
+               height: 200px;
+               margin-bottom: 25px;
+               border-radius: 4px;
+               box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.50);
+               cursor: pointer;
+               transition: box-shadow 300ms ease-in-out;
+
+                    &:nth-child(1) {
+                         background-image: url('../../img/blog/html.jpg');
+                         background-repeat: no-repeat;
+                         background-position: center;
+                         background-size: cover;
+
+                    }
+
+                    &:nth-child(2) {
+                         background-image: url('../../img/blog/css.jpg');
+                         background-position: center;
+                         background-repeat: no-repeat;
+                         background-size: cover;
+                    }
+
+                    &:nth-child(3) {
+                         background-color: #f7df1e;
+                         background-image: url('../../img/blog/js.jpg');
+                         background-size: contain;
+                         background-repeat: no-repeat;
+                         margin: 0px;
+                    }
+
+                &:hover {
+                  box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, 0.60);;
+                }
+          }
+          }
+
+          .descri {
+            margin-top: 100px;
+            text-align: center;
+
+              @media (max-width: 480px) {
+                margin-top: 50px;
+              }
+
+               a {
+                    color: black;
+                    padding:  10px 25px;
+                    border: 2px solid black;
+                    transition: all 300ms ease-in-out;
+                    
+
+                    &:hover {
+                         padding: 13px 28px;
+                         color: black;
+                         background: #f7df1e;
+                         border: 2px solid #f7df1e;
+                         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.50);
+                    }
+               }
+     }
+
+     section.kontak {
+        flex-wrap: wrap;
+
+          @media (max-width: 480px) {
+            margin: 120px 0px 15px 15px;
+          }
+
+       .foot {
+         width: 33.33%;
+
+          @media (max-width:480px) {
+            width: 90%;
+          }
+       }
+       
+         .copyright {
+
+            @media (max-width: 640px) {
+              text-align: center;
+            }
+         }
+
+         .Y {
+          text-align: center;
+         }
+
+        .fr {
+          display: flex;
+          align-items: center;
+          background-color: mediumslateblue;
+        }
+
+        .sc {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: yellowgreen
+        }
+        
+         .social-media {
+         height: 70px;
+         position: relative;
+         background-color: crimson;
+
+            @media (max-width: 640px) {
+              order: -1;
+            }
+          
+          .social-media__container {
+            position: absolute;
+            right: 0px;
+
+              @media (max-width: 640px) {
+                position: relative;
+                display: flex;
+                justify-content: center;
+              }
+              .social-media__container__item {
+                width: 50px;
+                height: 50px;
+                margin-right: 10px;
+                border-radius: 25px;
+                box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.50);
+                display: inline-block;
+                cursor: pointer;
+
+                  &:last-child {
+                    margin-right: 0px;
+                  }
+              }
+          }
+       }
+     }
+
+//kode Animasi ada disini
+     @keyframes Ani1 {
+          0% {
+
+          }
+
+          50% {
+               transform: translateX(-250px);
+          }
+
+          80% {
+               transform: translateX(50px);
+          }
+
+          100% {
+               transform: translateX(0px);
+          }
+     }
+
+     @keyframes yot {
+          0% {
+               transform: scale(0);
+          }
+
+          50% {
+               transform: scale(1.4);
+          }
+
+          70% {
+               transform: scale(0.8);
+          }
+          100% {
+               opacity: 1;
+               transform: scale(1);
+          }
+     }
+     }
