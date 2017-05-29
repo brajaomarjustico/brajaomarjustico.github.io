@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-//Masonry Grid
+    //Masonry Grid
       $('.grid').masonry({
            columnWidth: '.grid__sizer',
            itemSelector: '.grid__item',
@@ -9,7 +9,7 @@ $(document).ready(function() {
            horizontalOrder: true,
      });
 
-     //smoothScrolling
+    //smoothScrolling
      $('document').ready(function(){
        $('a[href*="#"]:not([href="#"])').on('click', function(e){
          if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname ){
@@ -25,7 +25,7 @@ $(document).ready(function() {
          }
     });
 
-       //saat kapan Animasi dimula
+    //saat kapan Animasi dimulai
      $(window).scroll(function(){
          var wScroll = $(this). scrollTop();
 
@@ -43,6 +43,13 @@ $(document).ready(function() {
 
        });
      });
+
+     //sideNav
+    //  $('.menu').on.click.(toggleMenu());
+
+
+
+
 });
 
 //Menu --------
