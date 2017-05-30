@@ -406,7 +406,7 @@ section.kontak {
   flex-wrap: wrap; }
   @media (max-width: 480px) {
     section.kontak {
-      margin: 50px 0px 15px 15px; } }
+      margin: 80px 0px 15px 15px; } }
   section.kontak .foot {
     width: 33.33%; }
     @media (max-width: 480px) {
@@ -429,7 +429,8 @@ section.kontak {
     position: relative; }
     @media (max-width: 640px) {
       section.kontak .social-media {
-        order: -1; } }
+        order: -1;
+        margin-bottom: 10px; } }
     section.kontak .social-media .social-media__container {
       position: absolute;
       right: 0px; }
