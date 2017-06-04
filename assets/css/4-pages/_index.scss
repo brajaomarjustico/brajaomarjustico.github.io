@@ -307,16 +307,11 @@
                      /* muncul 5 kolom */
                     .grid__sizer,
                     .grid__item {
-                          width: 20%;
+                        width: 20%;
 
-                               @media (max-width: 768px) {
-                                   width: 47.50%;
-                               }
-                    }
-
-                    /* muncul 2 kolom */
-                    .grid__item--width2 {
-                         //  width: 40%;
+                        @media (max-width: 768px) {
+                          width: 47.50%;
+                        }
                     }
 
                     .grid__item {
