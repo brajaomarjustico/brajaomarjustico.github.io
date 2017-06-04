@@ -194,7 +194,10 @@ header {
     width: 100%;
     height: 90%;
     position: relative;
-    margin-top: 50%; }
+    margin-top: 30%; }
+    @media (max-width: 460px) {
+      .side-nav ul {
+        margin-top: 50%; } }
     .side-nav ul li {
       width: 100%;
       margin: 0;
@@ -432,12 +435,12 @@ section.kontak {
     section.kontak .sc .Y {
       text-align: center; }
   section.kontak .social-media {
-    height: 70px;
+    height: 25px;
     position: relative; }
     @media (max-width: 768px) {
       section.kontak .social-media {
         order: -1;
-        margin-bottom: 10px; } }
+        margin-bottom: 20px; } }
     section.kontak .social-media .social-media__container {
       position: absolute;
       right: 0px; }
@@ -447,15 +450,38 @@ section.kontak {
           display: flex;
           justify-content: center; } }
       section.kontak .social-media .social-media__container .social-media__container__item {
-        width: 50px;
-        height: 50px;
+        width: 25px;
+        height: 25px;
         margin-right: 10px;
-        border-radius: 25px;
-        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
         display: inline-block;
         cursor: pointer; }
+        @media (max-width: 460px) {
+          section.kontak .social-media .social-media__container .social-media__container__item {
+            margin-right: 20px; } }
         section.kontak .social-media .social-media__container .social-media__container__item:last-child {
           margin-right: 0px; }
+      section.kontak .social-media .social-media__container .facebook {
+        transition: 200ms all ease-in-out; }
+        section.kontak .social-media .social-media__container .facebook:hover svg path {
+          fill: #475993 !important; }
+      section.kontak .social-media .social-media__container .instagram {
+        transition: 200ms all ease-in-out; }
+        section.kontak .social-media .social-media__container .instagram:hover svg .orange {
+          stop-color: #E09B3D !important; }
+        section.kontak .social-media .social-media__container .instagram:hover svg .red {
+          stop-color: #C74C4D !important; }
+        section.kontak .social-media .social-media__container .instagram:hover svg .pink {
+          stop-color: #C21975 !important; }
+        section.kontak .social-media .social-media__container .instagram:hover svg .purple {
+          stop-color: #7024C4 !important; }
+      section.kontak .social-media .social-media__container .dribble {
+        transition: 200ms all ease-in-out; }
+        section.kontak .social-media .social-media__container .dribble:hover svg path {
+          fill: #A6285F !important; }
+      section.kontak .social-media .social-media__container .gmail {
+        transition: 200ms all ease-in-out; }
+        section.kontak .social-media .social-media__container .gmail:hover svg path {
+          fill: #475993 !important; }
 
 @keyframes Ani1 {
   50% {
