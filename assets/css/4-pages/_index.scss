@@ -518,7 +518,7 @@
         flex-wrap: wrap;
 
           @media (max-width: 480px) {
-            margin: 80px 0px 15px 15px;
+            margin-top: 50px;
           }
 
        .foot {
@@ -582,19 +582,31 @@
                   &:last-child {
                     margin-right: 0px;
                   }
+
+                  
               }
 
               .facebook {
-                transition: 200ms all ease-in-out;
-                
+                svg path {
+                  transition: 150ms fill ease-in;
+                }
+
                 &:hover svg path{
                   fill: #475993 !important;
                 }
               }
 
               .instagram {
-                transition: 200ms all ease-in-out;
-                
+                svg {
+                  
+                  .orange,
+                  .red,
+                  .pink,
+                  .purple {
+                    transition: 150ms stop-color ease-in;
+                  }
+                }
+
                 &:hover svg {
 
                   .orange {
@@ -617,18 +629,37 @@
               }
 
               .dribble {
-                transition: 200ms all ease-in-out;
-                
+                svg path {
+                  transition: 150ms fill ease-in;
+                }
+
                 &:hover svg path{
                   fill: #A6285F !important;
                 }
               }
 
               .gmail {
-                transition: 200ms all ease-in-out;
+                svg {
+
+                  .poly,
+                  .red2,
+                  .red3 {
+                    transition: 150ms fill ease-in;
+                  }
+                }
                 
-                &:hover svg path{
-                  fill: #475993 !important;
+                &:hover svg {
+                  .poly {
+                    fill:#F2F2F2 !important; 
+                  }
+
+                  .red2 {
+                    fill:#F14336 !important;
+                  }
+
+                  .red3 {
+                    fill:#D32E2A !important;
+                  }
                 }
               }
           }
