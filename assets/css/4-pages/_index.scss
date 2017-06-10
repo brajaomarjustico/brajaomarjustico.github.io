@@ -285,8 +285,6 @@
      section.desain {
           padding: 75px 25px;
           background-image: url('../../img/bg design-01.jpg');
-          background-blend-mode: multiply;
-          background-color: rgba(15, 17, 243, 0.5);
           background-size: cover;
           text-align: center;
           align-items: center;
@@ -635,6 +633,16 @@
 
                 &:hover svg path{
                   fill: #A6285F !important;
+                }
+              }
+
+              .github {
+                svg path {
+                  transition: 150ms fill ease-in;
+                }
+
+                &:hover svg path{
+                  fill: #181616 !important;
                 }
               }
 
