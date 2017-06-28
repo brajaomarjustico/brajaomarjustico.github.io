@@ -534,6 +534,10 @@
           @media (max-width: 768px) {
             justify-content: center;
           }
+
+          .material-icons {
+            font-size: 16px !important;
+          }
         }
 
       .sc {
@@ -626,13 +630,14 @@
                 }
               }
 
-              .dribble {
+              .behance {
                 svg path {
                   transition: 150ms fill ease-in;
                 }
 
+
                 &:hover svg path{
-                  fill: #A6285F !important;
+                  fill: #1769ff !important;
                 }
               }
 
