@@ -282,7 +282,9 @@ section.desain {
           section.desain .col-50 .grid .grid__item {
             width: 47.50%; } }
       section.desain .col-50 .grid .grid__item {
-        background-color: #ccc;
+        background-color: #fff;
+        background-position: center;
+        background-size: cover;
         border-radius: 5px;
         margin-bottom: 10px;
         display: inline-block;
@@ -295,48 +297,41 @@ section.desain {
         section.desain .col-50 .grid .grid__item:hover {
           box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8); }
         section.desain .col-50 .grid .grid__item:nth-child(1) {
-          background-color: white;
-          background-image: url("../../img/design/Logo_A_team.png");
-          background-position: center;
-          background-size: cover; }
+          background-image: url("../../img/design/Logo_A_team.png"); }
         section.desain .col-50 .grid .grid__item:nth-child(2) {
-          background-image: url("../../img/design/Infinty-artr.jpg");
-          background-position: center;
-          background-size: cover; }
+          background-image: url("../../img/design/Infinty-artr.jpg"); }
         section.desain .col-50 .grid .grid__item:nth-child(3) {
-          background-color: white;
-          background-image: url("../../img/design/Logo-MM1.jpg");
-          background-position: center;
-          background-size: cover; }
+          background-image: url("./../../img/design/Logo-MM1.jpg"); }
         section.desain .col-50 .grid .grid__item:nth-child(4) {
-          background-color: white;
-          background-image: url("../../img/design/KN (Belakang).jpg");
-          background-size: cover; }
+          background-image: url("./../../img/design/kartu-nama-papah-(mockup)-konsep-1.jpg"); }
         section.desain .col-50 .grid .grid__item:nth-child(5) {
-          background-color: white;
-          background-image: url("../../img/design/KN (DEPAN).jpg");
-          background-position: center;
-          background-size: cover; }
+          background-image: url("./../../img/design/kartu-nama-papah-(mockup)-konsep-2.jpg"); }
         section.desain .col-50 .grid .grid__item:nth-child(6) {
-          background-color: white;
-          background-image: url("../../img/design/Goresan-tangan.jpg");
-          background-position: center;
-          background-size: cover; }
+          background-image: url("../../img/design/Goresan-tangan.jpg"); }
         section.desain .col-50 .grid .grid__item:nth-child(7) {
-          background-color: white;
-          background-image: url("../../img/design/Gundala j.jpg");
-          background-position: center;
-          background-size: cover; }
-        section.desain .col-50 .grid .grid__item:nth-child(2), section.desain .col-50 .grid .grid__item:nth-child(10) {
+          background-image: url("../../img/design/Gundala j.jpg"); }
+        section.desain .col-50 .grid .grid__item:nth-child(8) {
+          background-image: url("./../../img/design"); }
+        section.desain .col-50 .grid .grid__item:nth-child(9) {
+          background-image: url("./../../img/design/beli--iphone_6_mockup.jpg"); }
+        section.desain .col-50 .grid .grid__item:nth-child(10) {
+          background-image: url("./../../img/design/Logo Ane.jpg"); }
+        section.desain .col-50 .grid .grid__item:nth-child(11) {
+          background-image: url("./../../img/design/devStar-1.jpg"); }
+        section.desain .col-50 .grid .grid__item:nth-child(12) {
+          background-image: url("../../img/design/Gundala j.jpg"); }
+        section.desain .col-50 .grid .grid__item:nth-child(1), section.desain .col-50 .grid .grid__item:nth-child(10) {
           height: 125px; }
-        section.desain .col-50 .grid .grid__item:nth-child(4), section.desain .col-50 .grid .grid__item:nth-child(6) {
-          height: 185px; }
+        section.desain .col-50 .grid .grid__item:nth-child(2), section.desain .col-50 .grid .grid__item:nth-child(9) {
+          height: 225px; }
         section.desain .col-50 .grid .grid__item:nth-child(3), section.desain .col-50 .grid .grid__item:nth-child(8) {
-          height: 200px; }
-        section.desain .col-50 .grid .grid__item:nth-child(1), section.desain .col-50 .grid .grid__item:nth-child(9) {
-          height: 215px; }
-        section.desain .col-50 .grid .grid__item:nth-child(7), section.desain .col-50 .grid .grid__item:nth-child(5) {
-          height: 275px; }
+          height: 145px; }
+        section.desain .col-50 .grid .grid__item:nth-child(4), section.desain .col-50 .grid .grid__item:nth-child(7) {
+          height: 205px; }
+        section.desain .col-50 .grid .grid__item:nth-child(5), section.desain .col-50 .grid .grid__item:nth-child(6) {
+          height: 175px; }
+        section.desain .col-50 .grid .grid__item:nth-child(11), section.desain .col-50 .grid .grid__item:nth-child(12) {
+          height: 175px; }
       section.desain .col-50 .grid .is-visible {
         animation: yot 300ms forwards ease-in-out; }
         @media (max-width: 640px) {
